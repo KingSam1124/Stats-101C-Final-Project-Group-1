@@ -1,0 +1,21 @@
+
+Aluminum has many applications, from soda pop cans to jumbo jet fuselage skins.
+
+Company XYZ is a major manufacturer of rolled/pressed and formed, ready to use aluminum components, containers, skins and coverings. Most are very large.
+
+You are encouraged to do some research, but generally the manufacturing process goes something like this:
+
+Aluminum stock (ingots or blocks) is flattened by heating and (usually) repeated rolling.
+For complex shapes in high volume, the resulting sheets are die-and-cradle stamped by produce the final product.
+In some cases, for very large pieces without complex shape, the end product can be fashioned at the roller head.
+
+Company XYZ's big rolling and fabrication machine blade trims selvage from the leading edge of these fabrications for quality testing (these pieces are called "offcuts"). 
+
+There are many types of quality tests that are performed, including stress, strain, and overall durability. We are interested in durability. Durability means maintaining structural integrity over repeated small deformations throughout sometimes extreme variations in temperature.
+The measure in your data set is extreme durability (4-sigma, in this case). 
+
+Next time you board a jumbo jet, at the door you can see the edge of the fuselage skin. It will be about 3/8 inch thick, and likely 2xxx series aluminum alloy -- perhaps 2024-T3 -- renown for its durability.
+So when you're coasting along at 35,000 feet, just remember that that 3/8-inch-thick skin is the only thing between you and a whole lotta nothing.
+
+
+

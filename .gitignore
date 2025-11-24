@@ -1,0 +1,18 @@
+# R environment files
+.RData
+.Rhistory
+.Rproj.user/
+
+# R packages library
+R_libs/
+
+# Generated results and submissions
+results/
+submissions/
+
+# Trained models
+best_nn_model.h5
+
+# OS generated files
+.DS_Store
+Thumbs.db
