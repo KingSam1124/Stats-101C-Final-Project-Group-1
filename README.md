@@ -34,3 +34,8 @@ This project contains two main CatBoost models:
     ```bash
     python scripts/catboost_model_eng.py
     ```
+
+## Project Structure
+
+-   `scripts/`: Contains the final Python scripts for the models used in the project.
+-   `unused_model_scripts/`: Contains scripts for models that were explored but not selected as final models.
