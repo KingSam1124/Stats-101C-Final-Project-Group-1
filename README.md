@@ -6,7 +6,7 @@ This project aims to predict the durability of aluminum cold roll using a CatBoo
 
 1.  **Clone the repository:**
     ```bash
-    git clone <https://github.com/KingSam1124/Stats-101C-Final-Project-Group-1/tree/main>
+    git clone https://github.com/KingSam1124/Stats-101C-Final-Project-Group-1/tree/main
     cd Stats-101C-Final-Project-Group-1
     ```
 2.  **Create and activate a virtual environment:**
