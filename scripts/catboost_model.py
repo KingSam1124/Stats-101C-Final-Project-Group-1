@@ -1,12 +1,11 @@
-from catboost import CatBoostClassifier
 import pandas as pd
 from catboost import CatBoostClassifier, Pool
 from sklearn.model_selection import train_test_split
 import os 
 
 
-train_path = "aluminum_coldRoll_train.csv"
-test_path = "aluminum_coldRoll_testNoY.csv"
+train_path = "data/aluminum_coldRoll_train.csv"
+test_path = "data/aluminum_coldRoll_testNoY.csv"
 
 train = pd.read_csv(train_path)
 test = pd.read_csv(test_path)

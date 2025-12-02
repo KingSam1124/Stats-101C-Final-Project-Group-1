@@ -5,8 +5,8 @@ import os
 
 # Loading data
 
-train_path = "aluminum_coldRoll_train.csv"
-test_path = "aluminum_coldRoll_testNoY.csv"
+train_path = "data/aluminum_coldRoll_train.csv"
+test_path = "data/aluminum_coldRoll_testNoY.csv"
 
 train = pd.read_csv(train_path)
 test = pd.read_csv(test_path)

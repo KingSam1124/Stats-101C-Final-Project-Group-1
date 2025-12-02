@@ -1,18 +1,8 @@
-# R environment files
-.RData
-.Rhistory
-.Rproj.user/
-
-# R packages library
-R_libs/
-
-# Generated results and submissions
-results/
-submissions/
-
-# Trained models
-best_nn_model.h5
-
-# OS generated files
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
 .DS_Store
-Thumbs.db
+submissions/
+data/
+catboost_info/
