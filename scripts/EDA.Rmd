@@ -1,0 +1,110 @@
+---
+title: "EDA"
+author: "Sam Reade"
+date: "2025-11-29"
+output: html_document
+---
+
+# Exploratory Data Analysis: 
+
+# Data Structure:
+
+```{r}
+
+library(data.table)
+
+train <- fread("aluminum_coldRoll_train.csv")
+
+str(train)
+summary(train)
+
+```
+
+# Target Distribution: 
+
+```{r}
+
+table(train$y_passXtremeDurability)
+prop.table(table(train$y_passXtremeDurability))
+
+```
+
+# Numeric Feature Distributions: 
+
+```{r}
+
+numeric_cols <- c("firstPassRollPressure", "secondPassRollPressure",
+                  "contourDefNdx", "clearPassNdx")
+
+for (col in numeric_cols) {
+  hist(train[[col]], main = paste("Histogram:", col), xlab = col)
+}
+
+```
+
+# Categorical Feature Distributions: 
+
+```{r}
+
+categorical_cols <- c("alloy", "cutTemp", "rollTemp",
+                      "topEdgeMicroChipping", "blockSource",
+                      "machineRestart")
+
+for (col in categorical_cols) {
+  print(col)
+  print(table(train[[col]]))
+}
+
+```
+
+# Numeric VS Target: 
+
+```{r}
+
+boxplot(firstPassRollPressure ~ y_passXtremeDurability, data=train,
+        main="First Pass Pressure vs Outcome")
+
+boxplot(secondPassRollPressure ~ y_passXtremeDurability, data=train,
+        main="Second Pass Pressure vs Outcome")
+
+train[, pressure_diff := secondPassRollPressure - firstPassRollPressure]
+boxplot(pressure_diff ~ y_passXtremeDurability, data=train,
+        main="Pressure Diff vs Outcome")
+
+```
+
+# Categorical VS Target: 
+
+```{r}
+
+# Temperature: 
+
+prop.table(table(train$cutTemp, train$y_passXtremeDurability), 1)
+
+# Alloy:
+
+prop.table(table(substr(train$alloy, 1, 2), train$y_passXtremeDurability), 1)
+
+
+```
+
+# Correlation Plot: 
+
+```{r}
+
+library(corrplot)
+
+num_only <- train[, sapply(train, is.numeric), with=FALSE]
+cor_mat <- cor(num_only, use="pairwise.complete.obs")
+
+corrplot(cor_mat, method="color", tl.cex=0.7)
+
+```
+
+# Checking Missing Values: 
+
+```{r}
+colSums(is.na(train))
+```
+
+
